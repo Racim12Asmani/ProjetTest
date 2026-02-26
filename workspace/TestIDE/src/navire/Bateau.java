@@ -1,10 +1,13 @@
 package navire;
 
+import java.util.Arrays;
+import java.util.Iterator;
+
 public class Bateau {
 	private String nom;
 	private int taille;
 	private Element[] elements;
-	
+
 	public Bateau(String nom, int taille) {
 		this.nom = nom;
 		this.taille = taille;
@@ -14,8 +17,17 @@ public class Bateau {
 	public String getNom() {
 		return nom;
 	}
+
+	@Override
+	public String toString() {
+		return "Bateau [nom=" + nom + ", taille=" + taille + ", elements=" + Arrays.toString(elements) + "]";
+	}
 	
-	public void setTaille(int taille) {
-		this.taille = taille;
+	public void attaquer(int numElement) {
+		elements[numElement - 1].toucher();
+	}
+	
+	public static void main(String[] args) {
+		
 	}
 }

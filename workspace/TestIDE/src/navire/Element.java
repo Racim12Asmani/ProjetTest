@@ -6,4 +6,8 @@ public class Element {
 	public boolean isTouche() {
 		return touche;
 	}
+
+	public void toucher() {
+		touche = true;
+	}
 }
